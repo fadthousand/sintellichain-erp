@@ -1,0 +1,150 @@
+fad@fedora:~/Projects/College/ERP/sintellichain-erp$ docker compose up -d
+WARN[0000] /home/fad/Projects/College/ERP/sintellichain-erp/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] up 3/4
+ ! Image postgres:15-alpine   Interrupted                                  14.7s
+ ⠧ Image odoo:17.0            Pulling                                      14.7s
+ ✘ Image bitnami/kafka:latest Error failed to resolve reference "docke...  14.7s
+ ! Image mongo:6.0            Interrupted                                  14.7s
+Error response from daemon: failed to resolve reference "docker.io/bitnami/kafka:latest": docker.io/bitnami/kafka:latest: not found
+Error response from daemon: No such image: mongo:6.0
+Error response from daemon: No such image: postgres:15-alpine
+fad@fedora:~/Projects/College/ERP/sintellichain-erp$ sudo systemctl start docker
+[sudo] password for fad: 
+fad@fedora:~/Projects/College/ERP/sintellichain-erp$ sudo systemctl enable docker
+fad@fedora:~/Projects/College/ERP/sintellichain-erp$ docker compose up -d
+WARN[0000] /home/fad/Projects/College/ERP/sintellichain-erp/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] up 2/4
+ ⠙ Image odoo:17.0          Pulling                                        13.1s
+ ✘ Image bitnami/kafka:3.6  Error failed to resolve reference "docker....  13.1s
+ ! Image mongo:6.0          Interrupted                                    13.1s
+ ⠙ Image postgres:15-alpine Pulling                                        13.1s
+Error response from daemon: failed to resolve reference "docker.io/bitnami/kafka:3.6": docker.io/bitnami/kafka:3.6: not found
+Error response from daemon: No such image: mongo:6.0
+fad@fedora:~/Projects/College/ERP/sintellichain-erp$ docker compose up -d
+[+] up 6/48
+ ⠏ Image postgres:15-alpine [⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿] Pulling                                                                                                                582.0s
+ ⠏ Image apache/kafka:latest [⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling                                                                                                                582.0s
+ ⠏ Image odoo:17.0 [⣿⣿⣿⡀⠀⠀⣷⠀⠀⣿⣤]            Pulling                                                                                                                582.0s
+ ⠏ Image mongo:6.0 [⠀⠀⠀⠀⠀⠀⠀⠀]               Pulling                                                                                                                582.0s
+[+] up 7/48
+ ⠏ Image postgres:15-alpine [⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿] Pulling                                                                                                                606.0s
+ ⠏ Image apache/kafka:latest [⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling                                                                                                                606.0s
+ ⠏ Image odoo:17.0 [⣿⣿⣿⡀⠀⠀⣿⠀⠀⣿⣦]            Pulling                                                                                                                606.0s
+ ⠏ Image mongo:6.0 [⠀⠀⠀⠀⠀⠀⠀⠀]               Pulling                                                                                                                606.0s
+[+] up 7/48
+ ⠸ Image postgres:15-alpine [⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿] Pulling                                                                                                                653.4s
+ ⠸ Image apache/kafka:latest [⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling                                                                                                                653.4s
+ ⠸ Image odoo:17.0 [⣿⣿⣿⡀⠀⠀⣿⠀⠀⣿⣦]            Pulling                                                                                                                653.4s
+ ⠸ Image mongo:6.0 [⠀⠀⠀⠀⠀⠀⠀⠀]               Pulling                                                                                                                653.4s
+[+] up 23/48
+ ✔ Image postgres:15-alpine                        Pulled                                                                                                         2240.9s
+ ⠧ Image apache/kafka:latest [⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀]        Pulling                                                                                                        2256.7s
+ ⠧ Image odoo:17.0 [⣿⣿⣿⣶⣿⣀⣿⣿⣿⣿⣿] 375.4MB / 653.2MB Pulling                                                                                                        2256.7s
+ ⠧ Image mongo:6.0 [⠀⠀⠀⠀⠀⠀⠀⠀]                      Pulling                                                                                                        2256.7s
+failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Aapache%2Fkafka%3Apull&service=registry.docker.io": dial tcp [2a06:98c1:3104::6812:2bb2]:443: connect: network is unreachable
+fad@fedora:~/Projects/College/ERP/sintellichain-erp$ docker compose up -d
+
+[+] up 17/33
+ ⠦ Image apache/kafka:latest [⣿⣿⣿⠀⣿⣿⣿⣿⣿⡀⣿⠀]       Pulling                                                                                                         2136.7s
+ ⠦ Image mongo:6.0 [⣿⡀⣿⣿⣿⣿⣿⣿⣿⣿] 79.54MB / 282.1MB Pulling                                                                                                         2136.7s
+ ⠦ Image odoo:17.0 [⠀⠀⠀⠀⠀⠀⠀⠀]                     Pulling                                                                                                         2136.7s
+failed to copy: read tcp 192.168.18.212:56802->99.86.18.2:443: read: connection reset by peer
+fad@fedora:~/Projects/College/ERP/sintellichain-erp$ 
+fad@fedora:~/Projects/College/ERP/sintellichain-erp$ docker compose up -d
+[+] up 25/35
+ ✔ Image apache/kafka:latest                   Pulled                                                                                                             3278.9s
+ ✔ Image odoo:17.0                             Pulled                                                                                                             2195.0s
+ ✔ Image mongo:6.0                             Pulled                                                                                                             3741.0s
+ ✔ Volume sintellichain-erp_kafka_data         Created                                                                                                               0.0s
+ ✔ Network sintellichain-erp_sintellichain-net Created                                                                                                               0.0s
+ ✔ Volume sintellichain-erp_mongo_data         Created                                                                                                               0.0s
+ ✔ Volume sintellichain-erp_odoo_data          Created                                                                                                               0.0s
+ ✔ Volume sintellichain-erp_pg_data            Created                                                                                                               0.0s
+ ✔ Container sintellichain-postgres            Started                                                                                                               0.8s
+ ✔ Container sintellichain-kafka               Started                                                                                                               0.7s
+ ✔ Container sintellichain-mongodb             Started                                                                                                               0.9s
+ ✔ Container sintellichain-odoo                Started                                                                                                               0.6s
+fad@fedora:~/Projects/College/ERP/sintellichain-erp$ docker --help
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  bake        Build from a file
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Authenticate to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx
+  compose*    Docker Compose
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  system      Manage Docker
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default "/home/fad/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host string        Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/fad/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/fad/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/fad/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+fad@fedora:~/Projects/College/ERP/sintellichain-erp$ 
+
